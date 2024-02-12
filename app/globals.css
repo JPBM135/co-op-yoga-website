@@ -77,6 +77,38 @@ a {
   }
 }
 
+/* Utils */
 .utils__font-lora {
   font-family: "Lora", serif;
+}
+
+/* Animations */
+.animations__growing-hover {
+  display: inline-block;
+  margin: 0;
+}
+
+.animations__growing-hover::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #b3e5e5;
+  border-radius: 9999px;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.animations__growing-hover:hover::after {
+  transform: scaleX(1);
+}
+
+.animations__growing-hover--left::after {
+  transform-origin: 100% 50%;
+}
+
+.animations__growing-hover--left::after {
+  transform-origin: 0% 50%;
+}
+
+.animations__growing-hover--center::after {
+  transform-origin: 50% 50%;
 }

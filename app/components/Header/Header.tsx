@@ -76,17 +76,26 @@ export default function Header() {
             <nav className={styles.header__nav__container}>
               <a
                 href="#"
-                className={`${styles.header__nav__link} ${styles.header__title}`}
+                className={`${styles.header__nav__link} ${styles.header__title} animations__growing-hover animations__growing-hover--left`}
               >
                 Home
               </a>
-              <a href="#" className={styles.header__nav__link}>
+              <a
+                href="#"
+                className={`${styles.header__nav__link} animations__growing-hover animations__growing-hover--left`}
+              >
                 Classes
               </a>
-              <a href="#" className={styles.header__nav__link}>
+              <a
+                href="#"
+                className={`${styles.header__nav__link} animations__growing-hover animations__growing-hover--left`}
+              >
                 About
               </a>
-              <a href="#" className={styles.header__nav__link}>
+              <a
+                href="#"
+                className={`${styles.header__nav__link} animations__growing-hover animations__growing-hover--left`}
+              >
                 Contact
               </a>
             </nav>
