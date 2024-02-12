@@ -14,6 +14,30 @@
 
   --gradient-start: #ff52af;
   --gradient-end: #9f53ff;
+
+  --font-biggest: 2.75rem;
+  --font-bigger: 2rem;
+  --font-big: 1.75rem;
+  --font-h1: 1.5rem;
+  --font-h2: 1.25rem;
+  --font-h3: 1rem;
+  --font-h4: 0.938rem;
+  --font-small: 0.813rem;
+  --font-smaller: 0.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --font-biggest: 6rem;
+    --font-bigger: 4rem;
+    --font-big: 3.5rem;
+    --font-h1: 2.25rem;
+    --font-h2: 1.5rem;
+    --font-h3: 1.25rem;
+    --font-h4: 1rem;
+    --font-small: 0.875rem;
+    --font-smaller: 0.813rem;
+  }
 }
 
 [data-theme="dark"] {
@@ -38,6 +62,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: color 0.3s, background-color 0.3s;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -49,4 +75,8 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.utils__font-lora {
+  font-family: "Lora", serif;
 }
