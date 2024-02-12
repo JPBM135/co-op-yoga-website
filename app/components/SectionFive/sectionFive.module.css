@@ -1,0 +1,114 @@
+.section {
+  background-color: var(--gradient-start);
+  background-image: linear-gradient(
+    90deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  border-radius: 32px;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.section__title {
+  font-size: var(--font-big);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.section__text {
+  color: var(--white-color);
+  text-align: center;
+  font-size: var(--font-small);
+}
+
+.section__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.section__btn {
+  background-color: var(--gradient-start);
+  background-image: linear-gradient(
+    90deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  color: var(--white-color);
+  font-size: var(--font-h3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: box-shadow 0.3s;
+}
+
+.section__btn:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.section__input {
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  color: var(--first-color-dark);
+  background-color: var(--white-color);
+  font-size: var(--font-small);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 3rem;
+  }
+
+  .section__text {
+    max-width: 50%;
+  }
+
+  .section__container {
+    position: relative;
+    display: inline;
+    max-width: 80%;
+  }
+  .section__input {
+    height: 55px;
+  }
+
+  .section__btn {
+    position: absolute;
+    right: -13px;
+    width: 200px;
+    transform: scale(0.8);
+    top: 1.25px;
+    height: 52.5px;
+    font-size: var(--font-h4);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section__container {
+    max-width: 60%;
+  }
+}
