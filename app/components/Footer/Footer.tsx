@@ -6,18 +6,31 @@ import instagram from "./instagram.svg";
 import twitter from "./twitter.svg";
 import youtube from "./youtube.svg";
 import Image from "next/image";
+import { use, useState } from "react";
+import { useIsElementVisible } from "../../utils/isElementVisible";
 
 export function Footer() {
+  const element = document.getElementById("footer__main");
+  const isFooterVisible = useIsElementVisible(element);
+
   return (
-    <footer className={style.footer}>
+    <footer id="footer__main" className={style.footer}>
       <div className={style.footer__container}>
-        <div className={style.footer__container__about}>
+        <div
+          className={`${style.footer__container__about} ${
+            isFooterVisible ? style["footer__fade-in"] : ""
+          }`}
+        >
           <h2 className={`${style.footer__header} utils__font-lora`}>Yoga</h2>
           <p className={style.footer__text}>
             Take care of your health and your mind with the best Yoga classes.
           </p>
         </div>
-        <section className={style.footer__section}>
+        <section
+          className={`${style.footer__section} ${
+            isFooterVisible ? style["footer__fade-in"] : ""
+          }`}
+        >
           <h3 className={`utils__font-lora ${style.footer__section__title}`}>
             Address
           </h3>
@@ -27,7 +40,11 @@ export function Footer() {
             Sol Avenue, Lima, Peru
           </p>
         </section>
-        <section className={style.footer__section}>
+        <section
+          className={`${style.footer__section} ${
+            isFooterVisible ? style["footer__fade-in"] : ""
+          }`}
+        >
           <h3 className={`utils__font-lora ${style.footer__section__title}`}>
             Contact
           </h3>
@@ -37,7 +54,11 @@ export function Footer() {
             yoga@email.com
           </p>
         </section>
-        <section className={style.footer__section}>
+        <section
+          className={`${style.footer__section} ${
+            isFooterVisible ? style["footer__fade-in"] : ""
+          }`}
+        >
           <h3 className={`utils__font-lora ${style.footer__section__title}`}>
             Office
           </h3>
@@ -48,8 +69,16 @@ export function Footer() {
           </p>
         </section>
       </div>
-      <div className={style.footer__divider}></div>
-      <div className={style.footer__container}>
+      <div
+        className={`${style.footer__divider} ${
+          isFooterVisible ? style["footer__fade-in"] : ""
+        }`}
+      ></div>
+      <div
+        className={`${style.footer__container} ${
+          isFooterVisible ? style["footer__fade-in"] : ""
+        }`}
+      >
         <section className={style.footer__socials}>
           <Image
             src={facebook}
