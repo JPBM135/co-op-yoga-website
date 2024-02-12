@@ -37,6 +37,11 @@ export function Head() {
         href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap"
         rel="stylesheet"
       />
+
+      <meta
+        name="google-site-verification"
+        content="DYmDukp-I9-BFrZIeRHa0Ss2Ap9zDCggCA2dUuhLJro"
+      />
     </head>
   );
 }
