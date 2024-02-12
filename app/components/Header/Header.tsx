@@ -63,6 +63,7 @@ export default function Header() {
         <div className={styles.header__nav}>
           <button
             onClick={toggleColorScheme}
+            aria-label="Toggle color scheme"
             className={styles["header__nav__link--unset"]}
           >
             {colorScheme === "light" ? (
@@ -92,6 +93,7 @@ export default function Header() {
           ) : (
             <button
               className={styles["header__nav__link--unset"]}
+              aria-label="Toggle menu"
               onClick={toggleMenu}
             >
               <CirclesFour className={styles.header__nav__link} size={24} />
