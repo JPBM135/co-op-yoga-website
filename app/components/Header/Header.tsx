@@ -4,14 +4,19 @@ import { useEffect, useState } from "react";
 import styles from "./header.module.css";
 import { Moon, Sun, CirclesFour, X } from "@phosphor-icons/react";
 import { useIsScreenWide } from "../../utils/isScreenWideHook";
+import { safeWindow } from "../../utils/safeWindow";
 
 const PREFERRED_COLOR_SCHEME_KEY = "preferredColorScheme";
 
 export default function Header() {
+  const _window = safeWindow();
+
   const defaultTheme =
-    (localStorage.getItem(PREFERRED_COLOR_SCHEME_KEY) as "dark" | "light") ??
-    (window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches &&
+    (_window?.localStorage?.getItem(PREFERRED_COLOR_SCHEME_KEY) as
+      | "dark"
+      | "light") ??
+    (_window?.matchMedia &&
+      _window?.matchMedia("(prefers-color-scheme: dark)").matches &&
       "dark") ??
     "light";
 
@@ -48,7 +53,7 @@ export default function Header() {
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", colorScheme);
-    localStorage.setItem(PREFERRED_COLOR_SCHEME_KEY, colorScheme);
+    _window?.localStorage?.setItem(PREFERRED_COLOR_SCHEME_KEY, colorScheme);
   }, [colorScheme]);
 
   return (
