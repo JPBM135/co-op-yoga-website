@@ -1,12 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./header.module.css";
 import { Moon, Sun, CirclesFour, X } from "@phosphor-icons/react";
 import { useIsScreenWide } from "../../utils/isScreenWideHook";
 import { safeWindow } from "../../utils/safeWindow";
 
 const PREFERRED_COLOR_SCHEME_KEY = "preferredColorScheme";
+
+const setTheme = (
+  theme: "dark" | "light",
+  _window: Window & typeof globalThis
+) => {
+  document.documentElement.setAttribute("data-theme", theme);
+  _window?.localStorage?.setItem(PREFERRED_COLOR_SCHEME_KEY, theme);
+};
 
 export default function Header() {
   const _window = safeWindow();
@@ -52,9 +60,14 @@ export default function Header() {
   };
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", colorScheme);
-    _window?.localStorage?.setItem(PREFERRED_COLOR_SCHEME_KEY, colorScheme);
+    if (!_window) return;
+    setTheme(colorScheme, _window);
   }, [colorScheme]);
+
+  useEffect(() => {
+    if (!_window) return;
+    setTheme(colorScheme, _window);
+  }, []);
 
   return (
     <>
