@@ -1,0 +1,41 @@
+.section {
+    display: flex;
+    text-align: center;
+    padding: 2rem;
+    gap: 3rem;
+}
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    background-color: var(--first-color-light);
+}
+.title {
+    font-family: "Lora", serif;
+    font-weight: 300;
+    font-size: var(--font-bigger);
+    color: var(--title-color);
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.text {
+    font-size: var(--font-small);
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    width: 100%;
+    height: auto;
+}
+.button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: var(--font-h3);
+    font-weight: 700;
+    background-color: var(--body-color);
+    transition: 0.3s;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+}
