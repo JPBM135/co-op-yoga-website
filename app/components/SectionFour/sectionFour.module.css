@@ -1,17 +1,35 @@
+.section{
+    width: 100%;
+}
+
 .flex {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 909px;
-    padding-top: 100px;
+    margin: 100px 0px;
+    width: 100%;
+}
+
+.text_part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.text_part * {
+    margin-top: 10px;
 }
 
 .title>h2 {
-    font-size: 2rem;
+    font-size: var(--font-bigger);
     text-align: center;
     color: var(--title-color);
-    width: 100%;
+    font-family: "Lora", serif;
 }
 
 .gradient {
@@ -32,7 +50,7 @@
 
 .button>p {
     color: var(--white-color);
-    font-size: 1rem;
+    font-size: var(--font-h4);
     margin-top: 10px;
 }
 
@@ -40,11 +58,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 70%;
 }
 
 .image_top_div {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -52,22 +68,30 @@
 
 .scroll_yoga1 {
     animation: appear_from_left ease 1.5s;
+    width: 140px;
+    height: 210px;
 }
 
 .scroll_yoga2 {
     margin: 60px 0px 0px 0px;
     animation: appear_from_right ease 1.5s;
+    width: 140px;
+    height: 210px;
 }
 
 .scroll_yoga3 {
     margin-bottom: 10px;
     animation: appear_from_left ease 1.5s;
+    width: 230px;
+    height: auto;
 }
 
 .scroll_yoga4 {
     float: right;
     margin-left: 60px;
     animation: appear_from_right ease 1.5s;
+    width: 230px;
+    height: auto;
 }
 
 
@@ -100,7 +124,46 @@
 ##Screen = 1281px to higher resolution desktops
 */
 
-@media (min-width: 1281px) {
+@media (min-width: 768px) {
 
-    
+    .flex {
+        position: relative;
+        padding-top: 5%;
+        width: 100%;
+    }
+
+    .text_part {
+        display: flex;
+        flex-direction: row;   
+        margin-bottom: 30px;
+        justify-content: space-evenly;
+        width: 90%;
+    }
+
+    .title{
+        width: 40%;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .scroll_yoga1,  .scroll_yoga2{
+        width: 280px;
+        height: 420px;
+    }
+
+    .scroll_yoga2 {
+        margin: 0px 0px 0px 0px;
+    }
+
+    .image_part{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .scroll_yoga3,  .scroll_yoga4{
+        width: 500px;
+        height: 255.58px;
+    }
 }
