@@ -39,3 +39,7 @@
     border-radius: 9999px;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
 }
+
+.button:hover {
+    background: linear-gradient(90deg, var(--gradient-end), var(--gradient-start));
+}
