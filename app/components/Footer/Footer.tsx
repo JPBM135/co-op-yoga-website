@@ -6,11 +6,15 @@ import instagram from "./instagram.svg";
 import twitter from "./twitter.svg";
 import youtube from "./youtube.svg";
 import Image from "next/image";
-import { use, useState } from "react";
 import { useIsElementVisible } from "../../utils/isElementVisible";
+import { safeWindow } from "../../utils/safeWindow";
 
 export function Footer() {
-  const element = document.getElementById("footer__main");
+  const _window = safeWindow();
+
+  const element = _window?.document
+    ? _window.document.getElementById("footer__main")
+    : null;
   const isFooterVisible = useIsElementVisible(element);
 
   return (
