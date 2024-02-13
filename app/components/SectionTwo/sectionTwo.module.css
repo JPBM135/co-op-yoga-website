@@ -1,45 +1,168 @@
 .section {
-    display: flex;
-    text-align: center;
-    padding: 2rem;
-    gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 3rem;
 }
+
 .image {
-    width: 100%;
-    height: auto;
-    border-radius: 9999px;
-    margin-bottom: 2rem;
-    background-color: var(--first-color-light);
+  width: 100%;
+  height: auto;
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+  position: relative;
+  max-width: 500px;
 }
+
+.image__heart {
+  position: absolute;
+  top: 75px;
+  left: 0px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: var(--container-color);
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.image__heart__icon {
+  color: #ff2d27;
+  background-color: #ffe6e5;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  width: 38px;
+  height: 38px;
+}
+
+.image__heart__title {
+  font-size: var(--font-h3);
+  color: var(--title-color);
+}
+
+.image__heart__text {
+  background-color: var(--gradient-start);
+  background-image: linear-gradient(
+    45deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  width: fit-content;
+  font-size: var(--font-small);
+}
+
+.image__free {
+  position: absolute;
+  bottom: 55px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--container-color);
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.image__free__text {
+  font-size: var(--font-small);
+  color: var(--title-color);
+}
+
+.image__free__title {
+  background-color: var(--gradient-start);
+  background-image: linear-gradient(
+    45deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  width: fit-content;
+  font-size: var(--font-small);
+}
+
 .title {
-    font-family: "Lora", serif;
-    font-weight: 300;
-    font-size: var(--font-bigger);
-    color: var(--title-color);
-    margin-bottom: 1rem;
-    width: 100%;
+  font-family: "Lora", serif;
+  font-weight: 300;
+  font-size: var(--font-bigger);
+  color: var(--title-color);
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
 }
+
 .text {
-    font-size: var(--font-small);
-    color: var(--text-color);
-    margin-bottom: 2rem;
-    width: 100%;
-    height: auto;
+  font-size: var(--font-small);
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
 .button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    border: none;
-    font-size: var(--font-h3);
-    font-weight: 700;
-    background-color: var(--body-color);
-    transition: 0.3s;
-    border-radius: 9999px;
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  font-weight: 700;
+  background-color: var(--body-color);
+  transition: 0.3s;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
 }
 
 .button:hover {
-    background: linear-gradient(90deg, var(--gradient-end), var(--gradient-start));
+  background: linear-gradient(
+    90deg,
+    var(--gradient-end),
+    var(--gradient-start)
+  );
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .container {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .text {
+    text-align: left;
+  }
+
+  .title {
+    text-align: left;
+  }
 }
