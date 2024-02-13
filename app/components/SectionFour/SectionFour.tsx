@@ -24,11 +24,7 @@ export function SectionFour() {
       <section id="section4" className={styles.section}>
         <div className={styles.flex}>
           <div className={styles.text_part}>
-            <Image
-              src={yoga1}
-              alt={"yoga1"}
-              className={styles.scroll_yoga1}
-            ></Image>
+            <Image src={yoga1} alt={"yoga1"} className={isVisible ? styles.scroll_yoga1 : ""}></Image>
             <div className={styles.title}>
               <h2>
                 Follow Us On <br></br>Instagram
@@ -39,25 +35,11 @@ export function SectionFour() {
                 <p>&#10132;</p>
               </div>
             </div>
-            <Image
-              src={yoga2}
-              alt={"yoga2"}
-              className={`${styles.scroll_yoga2} ${
-                isVisible ? styles["scroll_yoga2"] : ""
-              }`}
-            ></Image>
+            <Image src={yoga2} alt={"yoga2"} className={isVisible ? styles.scroll_yoga2 : ""}></Image>
           </div>
           <div className={styles.image_part}>
-            <Image
-              src={yoga3}
-              alt={"yoga3"}
-              className={styles.scroll_yoga3}
-            ></Image>
-            <Image
-              src={yoga4}
-              alt={"yoga4"}
-              className={styles.scroll_yoga4}
-            ></Image>
+            <Image src={yoga3} alt={"yoga3"} className={isVisible ?styles.scroll_yoga3: ""}></Image>
+            <Image src={yoga4} alt={"yoga4"} className={isVisible ?styles.scroll_yoga4: ""}></Image>
           </div>
         </div>
       </section>
@@ -78,29 +60,11 @@ export function SectionFour() {
           </div>
           <div className={styles.image_part}>
             <div className={styles.image_top_div}>
-              <Image
-                src={yoga1}
-                alt={"yoga1"}
-                className={styles.scroll_yoga1}
-              ></Image>
-              <Image
-                src={yoga2}
-                alt={"yoga2"}
-                className={`${styles.scroll_yoga2} ${
-                  isVisible ? styles["scroll_yoga2"] : ""
-                }`}
-              ></Image>
+              <Image src={yoga1} alt={"yoga1"} className={isVisible ? styles.scroll_yoga1 : ""}></Image>
+              <Image src={yoga2} alt={"yoga2"} className={isVisible ? styles.scroll_yoga2 : ""}></Image>
             </div>
-            <Image
-              src={yoga3}
-              alt={"yoga3"}
-              className={styles.scroll_yoga3}
-            ></Image>
-            <Image
-              src={yoga4}
-              alt={"yoga4"}
-              className={styles.scroll_yoga4}
-            ></Image>
+            <Image src={yoga3} alt={"yoga3"} className={isVisible ?styles.scroll_yoga3: ""}></Image>
+            <Image src={yoga4} alt={"yoga4"} className={isVisible ?styles.scroll_yoga4: ""}></Image>
           </div>
         </div>
       </section>

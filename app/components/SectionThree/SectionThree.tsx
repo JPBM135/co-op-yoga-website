@@ -3,13 +3,17 @@ import yoga1 from "./routine-yoga-1.png";
 import yoga2 from "./routine-yoga-2.png";
 import box1 from "./ri_play-circle-fill.png";
 import box2 from "./ri_run-fill.png";
-// import box1 from "./Box routine 1.png";
-// import box2 from "./Box routine 2.png";
 import styles from "./sectionThree.module.css";
+import { safeWindow } from "../../utils/safeWindow";
+import { useIsElementVisible } from "../../utils/isElementVisible";
 
 export function SectionThree() {
+  const _window = safeWindow();
+  const element = _window?.document.getElementById("section3");
+  const isVisible = useIsElementVisible(element!);
+
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="section3">
       <div className={styles.flex}>
         <div className={styles.text_part}>
           <h2 className={styles.title}>Anytime, Any Place, Any Workout</h2>
