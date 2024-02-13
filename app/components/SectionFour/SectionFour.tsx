@@ -15,8 +15,8 @@ import { useIsElementVisible } from "../../utils/isElementVisible";
 export function SectionFour() {
 
   const _window = safeWindow();
-  const element = document.getElementById("section4");
-  const isVisible = useIsElementVisible(element);
+  const element = _window?.document.getElementById("section4");
+  const isVisible = useIsElementVisible(element!);
 
   let  returnContext;
 
