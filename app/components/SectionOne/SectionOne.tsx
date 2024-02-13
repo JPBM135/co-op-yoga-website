@@ -23,7 +23,6 @@ export function SectionOne() {
       </div>
 
       <div className={style.text}>
-        Joao eh gay
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, provident? Est quis necessitatibus molestias unde omnis aliquid eum nulla nemo voluptate repellat? Nihil ut facilis corrupti nisi nemo deserunt ipsa.
       </div>
 
